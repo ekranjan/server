@@ -22,7 +22,7 @@ app.use("/users",authorizeFromDatabase, userRoutes)
 app.use("/products", authorizeFromToken, productRoutes)
 app.use("/misc", miscRoutes)
 app.use("/thoughts",authorizeFromToken, thoughsRouter)
-app.use("/songs",authorizeFromToken, songRoutes)
+app.use("/songs", songRoutes)
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
